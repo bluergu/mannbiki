@@ -5,29 +5,7 @@ ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BONSAI_DIR="$ROOT_DIR/.bonsai/Bonsai-demo"
 SERVER_LOG="$ROOT_DIR/bonsai_server.log"
 
-while true; do
-  echo "使う 1-bit Bonsai のモデルサイズを選んでください: 1.7B / 4B / 8B"
-  echo "Enterだけなら 1.7B を使います"
-  echo "終了する場合は q を入力してください"
-  read -r MODEL_SIZE
-
-  if [ -z "$MODEL_SIZE" ]; then
-    MODEL_SIZE="1.7B"
-  fi
-
-  case "$MODEL_SIZE" in
-    1.7B|4B|8B)
-      break
-      ;;
-    q|quit|exit)
-      echo "終了します"
-      exit 0
-      ;;
-    *)
-      echo "想定外の入力です。もう一度入力してください。"
-      ;;
-  esac
-done
+MODEL_SIZE="1.7B"
 
 if ! command -v uv >/dev/null 2>&1; then
   echo "uv が見つかりません。Codespace の作成に失敗している可能性があります。"
