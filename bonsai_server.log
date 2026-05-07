@@ -199,3 +199,6 @@ main: model loaded
 main: server is listening on http://127.0.0.1:8080
 main: starting the main loop...
 srv  update_slots: all slots are idle
+srv    operator(): operator(): cleaning up before exit...
+llama_memory_breakdown_print: | memory breakdown [MiB] | total   free    self   model   context   compute    unaccounted |
+llama_memory_breakdown_print: |   - Host               |                 1431 =   231 +     896 +     304                |
