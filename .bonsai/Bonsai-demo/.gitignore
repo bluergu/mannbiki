@@ -217,3 +217,7 @@ mlx/
 .webui_secret_key
 *.tar.gz
 *.zip
+*.log
+config_local.txt
+*.log
+
